@@ -16,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/', [AdminController::class, 'show']);
+// Route::get('/', [AdminController::class, 'show']);
 Route::get('/dashboard', [AdminController::class, 'edit'])->name('admin.master');
-Route::get('/index',[DashboardiController::class,'index'])->name('admin.pages.dash_1');
-Route::get('/dataset',[DashboardiiController::class,'index'])->name('admin.pages.dash_2');
+Route::get('/index', [DashboardiController::class, 'index'])->name('admin.pages.dash_1');
+Route::get('/dataset', [DashboardiiController::class, 'index'])->name('admin.pages.dash_2');
